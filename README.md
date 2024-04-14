@@ -6,5 +6,4 @@
 - 
 - 
 
-P.S. I usually code in Python or Java.
-But you can also find here other programming languages.
+P.S. I usually code in Python or Java. But you can also find here other programming languages.
