@@ -1,15 +1,15 @@
 # Welcome to My Projects Repository!
 ## Feel free to explore and use these projects without any restrictions!
 
-This repository is a central hub for all my projects, showcasing a variety of work spanning [specific domains you're focusing on, e.g., web development, data science, AI, etc.].
-Below, you’ll find a categorized list of my projects with direct links to their repositories.
+This repository serves as a central hub for all my projects, showcasing work across diverse areas such as web development, data science, AI, and more.
+Below, you’ll find a categorized list of my projects with direct links to their subfolders.
 
 ---
 
-## Repository Overview
-- **[Project 1](https://github.com/Kubajava0/Kubajava0)**   
+## Projects Overview
+- **[OneTimeChatApp](https://github.com/Kubajava0/Kubajava0/tree/main/Projects/OneTimeChatApp)**   
 
-Each section includes links to individual projects with brief descriptions.
+Each section includes links to individual projects.
 
 ---
 
