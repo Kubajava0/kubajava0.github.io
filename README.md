@@ -15,3 +15,7 @@ Each section includes links to individual projects.
 
 Thank you for visiting my repository! If you like any of my projects, feel free to ⭐️ the repository or leave feedback.
 P.S. My main programming languages are Python and Java, but I enjoy exploring unusual technologies and experimenting with other programming languages.
+
+For any inquiries, support requests, or feedback, feel free to reach out at:
+Email: kubajava0@gmail.com
+I aim to respond to all messages as quickly as possible. Please include the nature of your inquiry in the subject line, and I'll get back to you as soon as I can!
