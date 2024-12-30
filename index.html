@@ -5,8 +5,7 @@
   <title>
    Kubajava0 - Github Projects
   </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
  </head>
@@ -17,18 +16,17 @@
     Kubajava0 - Github Projects
     </h1>
     <nav>
-     <ul class="flex space-x-4">
-      <li>
-       <a class="hover:underline" href="#about">
-        About
-       </a>
-      </li>
-      <li>
-       <a class="hover:underline" href="#projects">
-        Projects
-       </a>
-      </li>
-     </ul>
+        <ul class="flex space-x-4">
+            <li>
+                <a class="hover:underline" href="#about">About</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="#projects">Projects</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="#contact">Contact</a>
+            </li>
+        </ul>
     </nav>
    </div>
   </header>
@@ -73,6 +71,34 @@
      </div>
     </div>
    </section>
+   <section class="my-8" id="contact">
+    <h2 class="text-3xl font-bold mb-4">Contact</h2>
+    <form action="https://formsubmit.co/kubajava0@gmail.com?message=Thank%20you%20for%20contacting%20me!" method="POST" class="bg-white p-6 rounded-lg shadow-md">
+        <div class="mb-4">
+            <label for="name" class="block text-sm font-medium text-gray-700">Name:</label>
+            <input type="text" id="name" name="name" required class="mt-1 block w-full border border-gray-300 rounded-md p-2"/>
+        </div>
+        <div class="mb-4">
+            <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
+            <input type="email" id="email" name="email" required class="mt-1 block w-full border border-gray-300 rounded-md p-2"/>
+        </div>
+        <div class="mb-4">
+            <label for="reason" class="block text-sm font-medium text-gray-700">Reason for Contact:</label>
+            <select id="reason" name="reason" required class="mt-1 block w-full border border-gray-300 rounded-md p-2">
+                <option value="" disabled selected>Select a reason</option>
+                <option value="Report a Bug">Report a Bug</option>
+                <option value="Idea to Improve">Idea to Improve</option>
+                <option value="Have a Question">Have a Question</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <div class="mb-4">
+            <label for="message" class="block text-sm font-medium text-gray-700">Message:</label>
+            <textarea id="message" name="message" rows="4" required class="mt-1 block w-full border border-gray-300 rounded-md p-2"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-blue-600 text-white rounded-md p-2 hover:bg-blue-700">Send</button>
+    </form>
+    </section>
   </main>
   <footer class="bg-blue-600 text-white p-4 text-center">
    <p>
@@ -81,5 +107,38 @@
     All rights reserved.
    </p>
   </footer>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            let isValid = true;
+            let name = document.querySelector('#name').value;
+            let email = document.querySelector('#email').value;
+            let reason = document.querySelector('#reason').value;
+            let message = document.querySelector('#message').value;
+
+            if (!name) {
+                isValid = false;
+                alert('Please enter your name.');
+            }
+            if (!email) {
+                isValid = false;
+                alert('Please enter your email.');
+            }
+            else if (!/\S+@\S+\.\S+/.test(email)) {
+                isValid = false;
+                alert('Please enter a valid email address.');
+            }
+            if (!reason) {
+                isValid = false;
+                alert('Please select a reason for contact.');
+            }
+            if (!message) {
+                isValid = false;
+                alert('Please enter your message.');
+            }
+            if (!isValid) {
+                event.preventDefault();
+            }
+        });
+    </script>
  </body>
 </html>
