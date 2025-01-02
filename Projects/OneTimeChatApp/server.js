@@ -17,7 +17,7 @@ const server = http.createServer((request, response) => {
 
     if (pathname === "/chat") {
         response.setHeader("Content-Type", "text/html");
-        fs.readFile("./html_files/chat.html", function(error, data) {
+        fs.readFile(path.join(baseDir, "html_files", "chat.html"), function(error, data) {
             if (error) {
                 response.writeHead(404);
                 response.write("404 File Not Found");
