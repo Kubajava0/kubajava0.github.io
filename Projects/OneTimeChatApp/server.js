@@ -3,7 +3,6 @@ const fs = require("fs");
 const path = require("path");
 const url = require("url");
 const WebSocket = require("ws");
-const xss = require("xss-clean");
 
 const hostname = "0.0.0.0";
 const port = 3000;
@@ -17,7 +16,7 @@ const server = http.createServer((request, response) => {
 
     if (pathname === "/chat") {
         response.setHeader("Content-Type", "text/html");
-        fs.readFile(path.join(baseDir, "html_files", "chat.html"), function(error, data) {
+        fs.readFile(path.join(__dirname, "html_files", "chat.html"), function(error, data) {
             if (error) {
                 response.writeHead(404);
                 response.write("404 File Not Found");
@@ -70,7 +69,7 @@ wss.on("connection", (ws, req) => {
     ws.username = "User";
 
     ws.on("message", (data) => {
-        const message = xss(data.toString());
+        const message = data.toString();
         if (message.startsWith("setUsername:")) {
             const newUsername = message.split(':')[1];
             ws.username = newUsername;

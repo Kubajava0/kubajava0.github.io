@@ -1,6 +1,5 @@
 ### **Important:** In this version this server runs on the **http** protocol, meaning the connection is **NOT encrypted**. Additionally, the default hostname is 0.0.0.0, so after you enable the port on firewall and set-up a port forwarding, your chat will become accessible from any device worldwide, thus make sure to **NEVER send any sensitive or confidential information over this connection**, as it could be intercepted by unauthorized users or third parties due to the lack of encryption. In future updates I may increase the security of the chat, but for now just use it for fun, not really seriously.
-### P.S. This version uses **xss-clean** to avoid xss. Also run `npm audit` sometimes to keep your packages(fs, url, ws,...) up-to-date, otherwise there could be some abusable bug.
-
+### P.S. Run `npm audit` sometimes to keep your packages(fs, url, ws,...) up-to-date, otherwise there could be some abusable bug.
 
 ### There are also some incoming updates (this is not the final version) - adding /admin, encrypting connection, etc.
 ### In this folder is `OneTimeChatApp.zip`, which contains all the necessary scripts.
@@ -11,7 +10,7 @@
 
 **0. Install Node.js and modules**:  
    - [Download Node.js](https://nodejs.org) — This is the server required for hosting the chat.
-   - Run `npm install http fs path url ws xss-clean` (Nmp is default package manager for Node.js.) in the directory `OneTimeChatApp` (or how you renamed it).
+   - Run `npm install http fs path url ws` (Nmp is default package manager for Node.js.) in the directory `OneTimeChatApp` (or how you renamed it).
 
 **1. Check Your Firewall Settings**:  
    - Ensure that the port your Node.js server is using (e.g., 3000) is open in your firewall.  
