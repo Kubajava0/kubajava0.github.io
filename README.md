@@ -2,12 +2,12 @@
 ## Feel free to explore and use these projects without any restrictions!
 
 This repository serves as a central hub for all my projects, showcasing work across diverse areas such as web development, data science, AI, and more.
-Below, you’ll find a categorized list of my projects with direct links to their subfolders.
+Below, you’ll find a categorized list of my projects with direct links to their repositories.
 
 ---
 
 ## Projects Overview
-- **[OneTimeChatApp](https://github.com/Kubajava0/Kubajava0/tree/main/Projects/OneTimeChatApp)**   
+- **[Coming soon...](https://github.com/Kubajava0/Kubajava0)**   
 
 Each section includes links to individual projects.
 
