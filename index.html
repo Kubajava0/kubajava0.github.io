@@ -2,7 +2,7 @@
  <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
+  <title id="site-title">
    Kubajava0 - Github Projects
   </title>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -12,38 +12,42 @@
  <body class="font-roboto bg-gray-100 text-gray-900">
   <header class="bg-blue-600 text-white p-4">
    <div class="container mx-auto flex justify-between items-center">
-    <h1 class="text-2xl font-bold">
+    <h1 class="text-2xl font-bold" id="title">
     Kubajava0 - Github Projects
     </h1>
     <nav>
         <ul class="flex space-x-4">
             <li>
-                <a class="hover:underline" href="#about">About</a>
+                <a class="hover:underline" href="#about" id="link-about-me">About me</a>
             </li>
             <li>
-                <a class="hover:underline" href="#projects">Projects</a>
+                <a class="hover:underline" href="#projects" id="link-projects">Projects</a>
             </li>
             <li>
-                <a class="hover:underline" href="#contact">Contact</a>
+                <a class="hover:underline" href="#contact" id="link-contact">Contact</a>
             </li>
         </ul>
     </nav>
+    <div class="flex space-x-2 items-center p-2 bg-blue-600 w-fit rounded-lg">
+        <img src="https://flagcdn.com/w80/cz.png" alt="CZ" class="w-10 h-7 cursor-pointer" onclick="switchLanguage('cz')"/>
+        <img src="https://flagcdn.com/w80/gb.png" alt="EN" class="w-10 h-7 cursor-pointer" onclick="switchLanguage('en')"/>
+    </div>
    </div>
   </header>
   <main class="container mx-auto p-4">
    <section class="my-8" id="about">
-    <h2 class="text-3xl font-bold mb-4">
-     About Me
+    <h2 class="text-3xl font-bold mb-4" id="title-about-me">
+     About me
     </h2>
     <div class="flex flex-col md:flex-row items-center">
      <img alt="Profile picture" class="rounded-full mb-4 md:mb-0 md:mr-4" height="150" src="https://avatars.githubusercontent.com/u/90498569" width="150"/>
-     <p class="text-lg">
+     <p class="text-lg" id="text-about-me">
         Hi, I love coding and enjoy bringing ideas to life through projects. Check out my work, and feel free to reach out if you're interested in collaborating!
      </p>
     </div>
    </section>
    <section class="my-8" id="projects">
-    <h2 class="text-3xl font-bold mb-4">
+    <h2 class="text-3xl font-bold mb-4" id="title-projects">
      Projects
     </h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -51,83 +55,131 @@
         <a href="https://www.github.com/Kubajava0" class="absolute top-2 right-2 bg-blue-500 text-white rounded-full p-1 hover:bg-blue-600">
             <i class="fas fa-link"></i>
         </a>
-      <h3 class="text-xl font-bold mb-2">
+      <h3 class="text-xl font-bold mb-2" id="text-coming-soon-1">
        Coming soon...
       </h3>
-      <p class="text-gray-700">
+      <p class="text-gray-700" id="text-coming-soon-2">
        Coming soon...
       </p>
      </div>
     </div>
    </section>
    <section class="my-8" id="contact">
-    <h2 class="text-3xl font-bold mb-4">Contact</h2>
+    <h2 class="text-3xl font-bold mb-4" id="title-contact">Contact</h2>
     <form action="https://formsubmit.co/kubajava0@gmail.com?message=Thank%20you%20for%20contacting%20me!" method="POST" class="bg-white p-6 rounded-lg shadow-md">
         <div class="mb-4">
-            <label for="name" class="block text-sm font-medium text-gray-700">Name:</label>
+            <label for="name" class="block text-sm font-medium text-gray-700" id="text-name">Name:</label>
             <input type="text" id="name" name="name" required class="mt-1 block w-full border border-gray-300 rounded-md p-2"/>
         </div>
         <div class="mb-4">
-            <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
+            <label for="email" class="block text-sm font-medium text-gray-700" id="text-email">Email:</label>
             <input type="email" id="email" name="email" required class="mt-1 block w-full border border-gray-300 rounded-md p-2"/>
         </div>
         <div class="mb-4">
-            <label for="reason" class="block text-sm font-medium text-gray-700">Reason for Contact:</label>
+            <label for="reason" class="block text-sm font-medium text-gray-700" id="text-reason-1">Reason for Contact:</label>
             <select id="reason" name="reason" required class="mt-1 block w-full border border-gray-300 rounded-md p-2">
-                <option value="" disabled selected>Select a reason</option>
-                <option value="Report a Bug">Report a Bug</option>
-                <option value="Idea to Improve">Idea to Improve</option>
-                <option value="Have a Question">Have a Question</option>
-                <option value="Other">Other</option>
+                <option value="" disabled selected id="text-reason-2">Select a reason</option>
+                <option value="Report a Bug" id="text-bug">Report a Bug</option>
+                <option value="Idea to Improve" id="text-idea">Idea to Improve</option>
+                <option value="Have a Question" id="text-question">Have a Question</option>
+                <option value="Other" id="text-other">Other</option>
             </select>
         </div>
         <div class="mb-4">
-            <label for="message" class="block text-sm font-medium text-gray-700">Message:</label>
+            <label for="message" class="block text-sm font-medium text-gray-700" id="text-message">Message:</label>
             <textarea id="message" name="message" rows="4" required class="mt-1 block w-full border border-gray-300 rounded-md p-2"></textarea>
         </div>
-        <button type="submit" class="w-full bg-blue-600 text-white rounded-md p-2 hover:bg-blue-700">Send</button>
+        <button type="submit" class="w-full bg-blue-600 text-white rounded-md p-2 hover:bg-blue-700" id="text-send">Send</button>
     </form>
     </section>
   </main>
   <footer class="bg-blue-600 text-white p-4 text-center">
-   <p>
-    © 2025 
-    <a href="https://www.github.com/Kubajava0">Kubajava0.</a>
-    All rights reserved.
+   <p id="text-end-line">
+    © 2025 Kubajava0. All rights reserved.
    </p>
   </footer>
     <script>
-        document.querySelector('form').addEventListener('submit', function(event) {
+        document.querySelector("form").addEventListener("submit", function(event) {
             let isValid = true;
-            let name = document.querySelector('#name').value;
-            let email = document.querySelector('#email').value;
-            let reason = document.querySelector('#reason').value;
-            let message = document.querySelector('#message').value;
+            let name = document.querySelector("#name").value;
+            let email = document.querySelector("#email").value;
+            let reason = document.querySelector("#reason").value;
+            let message = document.querySelector("#message").value;
 
             if (!name) {
                 isValid = false;
-                alert('Please enter your name.');
+                alert("Please enter your name.");
             }
             if (!email) {
                 isValid = false;
-                alert('Please enter your email.');
+                alert("Please enter your email.");
             }
             else if (!/\S+@\S+\.\S+/.test(email)) {
                 isValid = false;
-                alert('Please enter a valid email address.');
+                alert("Please enter a valid email address.");
             }
             if (!reason) {
                 isValid = false;
-                alert('Please select a reason for contact.');
+                alert("Please select a reason for contact.");
             }
             if (!message) {
                 isValid = false;
-                alert('Please enter your message.');
+                alert("Please enter your message.");
             }
             if (!isValid) {
                 event.preventDefault();
             }
         });
+        
+        function switchLanguage(lang) {
+            if (lang === "cz") {
+                document.getElementById("site-title").innerText = "Kubajava0 - Github Projekty";
+                document.getElementById("title").innerText = "Kubajava0 - Github Projekty";
+                document.getElementById("link-about-me").innerText = "O mně";
+                document.getElementById("link-projects").innerText = "Projekty";
+                document.getElementById("link-contact").innerText = "Kontakt";
+                document.getElementById("title-about-me").innerText = "O mně";
+                document.getElementById("title-projects").innerText = "Projekty";
+                document.getElementById("title-contact").innerText = "Kontakt";
+                document.getElementById("text-about-me").innerText = "Ahoj, miluji kódování a rád realizuji své nápady prostřednictvím projektů. Podívejte se na mou práci a neváhejte mě kontaktovat, pokud máte zájem o spolupráci!";
+                document.getElementById("text-coming-soon-1").innerText = "Již brzy...";
+                document.getElementById("text-coming-soon-2").innerText = "Již brzy...";
+                document.getElementById("text-name").innerText = "Jméno:";
+                document.getElementById("text-email").innerText = "Email:";
+                document.getElementById("text-reason-1").innerText = "Důvod kontaktování:";
+                document.getElementById("text-reason-2").innerText = "Vyberte důvod";
+                document.getElementById("text-bug").innerText = "Nahlášení chyby";
+                document.getElementById("text-idea").innerText = "Nápad ke zlepšení";
+                document.getElementById("text-question").innerText = "Mám otázku";
+                document.getElementById("text-other").innerText = "Jiné";
+                document.getElementById("text-message").innerText = "Zpráva:";
+                document.getElementById("text-send").innerText = "Odeslat";
+                document.getElementById("text-end-line").innerText = "© 2025 Kubajava0. Všechna práva vyhrazena.";
+            } else {
+                document.getElementById("site-title").innerText = "Kubajava0 - Github Projects";
+                document.getElementById("title").innerText = "Kubajava0 - Github Projects";
+                document.getElementById("link-about-me").innerText = "About me";
+                document.getElementById("link-projects").innerText = "Projects";
+                document.getElementById("link-contact").innerText = "Contact";
+                document.getElementById("title-about-me").innerText = "About me";
+                document.getElementById("title-projects").innerText = "Projects";
+                document.getElementById("title-contact").innerText = "Contact";
+                document.getElementById("text-about-me").innerText = "Hi, I love coding and enjoy bringing ideas to life through projects. Check out my work, and feel free to reach out if you're interested in collaborating!";
+                document.getElementById("text-coming-soon-1").innerText = "Coming soon...";
+                document.getElementById("text-coming-soon-2").innerText = "Coming soon...";
+                document.getElementById("text-name").innerText = "Name:";
+                document.getElementById("text-email").innerText = "Email:";
+                document.getElementById("text-reason-1").innerText = "Reason for Contact:";
+                document.getElementById("text-reason-2").innerText = "Select a reason";
+                document.getElementById("text-bug").innerText = "Report a Bug";
+                document.getElementById("text-idea").innerText = "Idea to Improve";
+                document.getElementById("text-question").innerText = "Have a Question";
+                document.getElementById("text-other").innerText = "Other";
+                document.getElementById("text-message").innerText = "Message:";
+                document.getElementById("text-send").innerText = "Send";
+                document.getElementById("text-end-line").innerText = "© 2025 Kubajava0. All rights reserved.";
+            }
+        }
     </script>
  </body>
 </html>
