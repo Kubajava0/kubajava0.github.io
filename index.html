@@ -1,110 +1,128 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
  <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title id="site-title">
-   Kubajava0 - Github Projects
-  </title>
+  <title id="site-title">Kubajava0 - Github Projects</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .code-font { font-family: 'JetBrains Mono', monospace; }
+  </style>
  </head>
- <body class="font-roboto bg-gray-100 text-gray-900">
-  <header class="bg-blue-600 text-white p-4">
-   <div class="container mx-auto flex justify-between items-center">
-    <h1 class="text-2xl font-bold" id="title">
-    Kubajava0 - Github Projects
-    </h1>
+ <body class="bg-[#0f172a] text-slate-200 antialiased min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white">
+  
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-[#0f172a]/80 border-b border-slate-800">
+   <div class="container mx-auto max-w-5xl flex justify-between items-center p-4">
+    <a href="#" class="text-xl font-bold tracking-tight text-white hover:text-indigo-400 transition-colors code-font">
+     Kubajava0 - Github Projects
+    </a>
     <nav>
-        <ul class="flex space-x-4">
-            <li>
-                <a class="hover:underline" href="#about" id="link-about-me">About me</a>
-            </li>
-            <li>
-                <a class="hover:underline" href="#projects" id="link-projects">Projects</a>
-            </li>
-            <li>
-                <a class="hover:underline" href="#contact" id="link-contact">Contact</a>
-            </li>
+        <ul class="flex space-x-6 text-sm font-medium text-slate-400">
+            <li><a class="hover:text-white transition-colors" href="#about" id="link-about-me">About</a></li>
+            <li><a class="hover:text-white transition-colors" href="#projects" id="link-projects">Projects</a></li>
+            <li><a class="hover:text-white transition-colors" href="#contact" id="link-contact">Contact</a></li>
         </ul>
     </nav>
-    <div class="flex space-x-2 items-center p-2 bg-blue-600 w-fit rounded-lg">
-        <img src="https://flagcdn.com/w80/cz.png" alt="CZ" class="w-10 h-7 cursor-pointer" onclick="switchLanguage('cz')"/>
-        <img src="https://flagcdn.com/w80/gb.png" alt="EN" class="w-10 h-7 cursor-pointer" onclick="switchLanguage('en')"/>
-    </div>
    </div>
   </header>
-  <main class="container mx-auto p-4">
-   <section class="my-8" id="about">
-    <h2 class="text-3xl font-bold mb-4" id="title-about-me">
-     About me
-    </h2>
-    <div class="flex flex-col md:flex-row items-center">
-     <img alt="Profile picture" class="rounded-full mb-4 md:mb-0 md:mr-4" height="150" src="https://avatars.githubusercontent.com/u/90498569" width="150"/>
-     <p class="text-lg" id="text-about-me">
-        Hi, I love coding and enjoy bringing ideas to life through projects. Check out my work, and feel free to reach out if you're interested in collaborating!
-     </p>
+
+  <!-- Main Grid Container -->
+  <main class="container mx-auto max-w-3xl flex-grow px-4 py-12">
+   
+   <!-- About Section -->
+   <section class="mb-16 scroll-mt-24" id="about">
+    <div class="flex flex-col-reverse sm:flex-row items-center sm:items-start justify-between gap-8">
+     <div class="space-y-4 max-w-xl text-center sm:text-left">
+      <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl" id="title">
+       Hey, I'm Jakub <span class="animate-pulse text-indigo-400">👋</span>
+      </h1>
+      <p class="text-lg text-slate-400 leading-relaxed" id="text-about-me">
+       I'm a developer focusing on <strong class="text-slate-200 font-semibold">Python</strong> and <strong class="text-slate-200 font-semibold">Java</strong>, but I love messing around with unique technologies and exploring new stacks. Everything I build is open-source, so feel free to fork or use whatever you like!
+      </p>
+      <div class="flex justify-center sm:justify-start gap-4 pt-2">
+       <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20 code-font">#Python</span>
+       <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20 code-font">#Java</span>
+       <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20 code-font">#Tech</span>
+      </div>
+     </div>
+     <img alt="Profile picture" class="rounded-2xl border-2 border-slate-800 shadow-2xl p-1 bg-slate-900/50" height="120" src="https://avatars.githubusercontent.com/u/90498569" width="120"/>
     </div>
    </section>
-   <section class="my-8" id="projects">
-    <h2 class="text-3xl font-bold mb-4" id="title-projects">
+
+   <!-- Projects Section -->
+   <section class="mb-16 scroll-mt-24" id="projects">
+    <h2 class="text-2xl font-bold tracking-tight text-white mb-6" id="title-projects">
      Projects
     </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-     <div class="bg-white p-4 rounded-lg shadow-md relative">
-        <a href="https://www.github.com/Kubajava0" class="absolute top-2 right-2 bg-blue-500 text-white rounded-full p-1 hover:bg-blue-600">
-            <i class="fas fa-link"></i>
+    <div class="grid grid-cols-1 gap-4">
+     <div class="group bg-slate-900/40 border border-slate-800 p-5 rounded-xl relative hover:border-slate-700 transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/[0.02]">
+        <a href="https://www.github.com/Kubajava0" class="absolute top-5 right-5 text-slate-500 hover:text-white p-2 rounded-lg bg-slate-800/40 border border-slate-700/50 hover:bg-slate-700/50 transition-all" target="_blank">
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
         </a>
-      <h3 class="text-xl font-bold mb-2" id="text-coming-soon-1">
-       Coming soon...
+      <h3 class="text-lg font-semibold text-white mb-1 group-hover:text-indigo-400 transition-colors" id="text-coming-soon-1">
+       Coming Soon...
       </h3>
-      <p class="text-gray-700" id="text-coming-soon-2">
-       Coming soon...
+      <p class="text-slate-400 text-sm leading-relaxed" id="text-coming-soon-2">
+       Coming Soon...
       </p>
      </div>
     </div>
    </section>
-   <section class="my-8" id="contact">
-    <h2 class="text-3xl font-bold mb-4" id="title-contact">Contact</h2>
-    <form action="https://formsubmit.co/kubajava0@gmail.com?message=Thank%20you%20for%20contacting%20me!" method="POST" class="bg-white p-6 rounded-lg shadow-md">
-        <div class="mb-4">
-            <label for="name" class="block text-sm font-medium text-gray-700" id="text-name">Name:</label>
-            <input type="text" id="name" name="name" required class="mt-1 block w-full border border-gray-300 rounded-md p-2"/>
+
+   <!-- Contact Section -->
+   <section class="scroll-mt-24" id="contact">
+    <h2 class="text-2xl font-bold tracking-tight text-white mb-2" id="title-contact">Contact</h2>
+    <p class="text-sm text-slate-400 mb-6">Drop me a line for inquiries, custom builds, or just to chat tech stack!</p>
+    
+    <form action="https://formsubmit.co/kubajava0@gmail.com?message=Thank%20you%20for%20contacting%20me!" method="POST" class="bg-slate-900/30 border border-slate-800 p-6 rounded-xl space-y-4">
+        <div>
+            <label for="name" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5" id="text-name">Name</label>
+            <input type="text" id="name" name="name" required class="w-full bg-slate-950/50 border border-slate-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 rounded-lg p-2.5 text-white placeholder-slate-600 outline-none transition-all text-sm"/>
         </div>
-        <div class="mb-4">
-            <label for="email" class="block text-sm font-medium text-gray-700" id="text-email">Email:</label>
-            <input type="email" id="email" name="email" required class="mt-1 block w-full border border-gray-300 rounded-md p-2"/>
+        <div>
+            <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5" id="text-email">Email</label>
+            <input type="email" id="email" name="email" required class="w-full bg-slate-950/50 border border-slate-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 rounded-lg p-2.5 text-white placeholder-slate-600 outline-none transition-all text-sm"/>
         </div>
-        <div class="mb-4">
-            <label for="reason" class="block text-sm font-medium text-gray-700" id="text-reason-1">Reason for Contact:</label>
-            <select id="reason" name="reason" required class="mt-1 block w-full border border-gray-300 rounded-md p-2">
-                <option value="" disabled selected id="text-reason-2">Select a reason</option>
-                <option value="Report a Bug" id="text-bug">Report a Bug</option>
-                <option value="Idea to Improve" id="text-idea">Idea to Improve</option>
-                <option value="Have a Question" id="text-question">Have a Question</option>
-                <option value="Other" id="text-other">Other</option>
+        <div>
+            <label for="reason" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5" id="text-reason-1">Reason for Contact</label>
+            <select id="reason" name="reason" required class="w-full bg-slate-950/50 border border-slate-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 rounded-lg p-2.5 text-white outline-none transition-all text-sm appearance-none cursor-pointer">
+                <option value="" disabled selected id="text-reason-2" class="bg-slate-900">Select a reason</option>
+                <option value="Report a Bug" id="text-bug" class="bg-slate-900">Report a Bug</option>
+                <option value="Idea to Improve" id="text-idea" class="bg-slate-900">Idea to Improve</option>
+                <option value="Have a Question" id="text-question" class="bg-slate-900">Have a Question</option>
+                <option value="Other" id="text-other" class="bg-slate-900">Other</option>
             </select>
         </div>
-        <div class="mb-4">
-            <label for="message" class="block text-sm font-medium text-gray-700" id="text-message">Message:</label>
-            <textarea id="message" name="message" rows="4" required class="mt-1 block w-full border border-gray-300 rounded-md p-2"></textarea>
+        <div>
+            <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5" id="text-message">Message</label>
+            <textarea id="message" name="message" rows="4" required class="w-full bg-slate-950/50 border border-slate-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 rounded-lg p-2.5 text-white placeholder-slate-600 outline-none transition-all text-sm resize-none"></textarea>
         </div>
-        <button type="submit" class="w-full bg-blue-600 text-white rounded-md p-2 hover:bg-blue-700" id="text-send">Send</button>
+        <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 text-white font-medium rounded-lg p-2.5 text-sm transition-colors shadow-lg shadow-indigo-600/10 outline-none" id="text-send">
+          Send Message
+        </button>
     </form>
     </section>
   </main>
-  <footer class="bg-blue-600 text-white p-4 text-center">
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/60 bg-slate-950/20 py-6 text-center text-xs text-slate-500">
    <p id="text-end-line">
-    © 2025 Kubajava0. All rights reserved.
+    © 2026 Kubajava0. All rights reserved.
    </p>
   </footer>
+
+    <!-- Form Submit Logic / Validation -->
     <script>
         document.querySelector("form").addEventListener("submit", function(event) {
             let isValid = true;
-            let name = document.querySelector("#name").value;
-            let email = document.querySelector("#email").value;
+            let name = document.querySelector("#name").value.trim();
+            let email = document.querySelector("#email").value.trim();
             let reason = document.querySelector("#reason").value;
-            let message = document.querySelector("#message").value;
+            let message = document.querySelector("#message").value.trim();
 
             if (!name) {
                 isValid = false;
@@ -130,56 +148,6 @@
                 event.preventDefault();
             }
         });
-        
-        function switchLanguage(lang) {
-            if (lang === "cz") {
-                document.getElementById("site-title").innerText = "Kubajava0 - Github Projekty";
-                document.getElementById("title").innerText = "Kubajava0 - Github Projekty";
-                document.getElementById("link-about-me").innerText = "O mně";
-                document.getElementById("link-projects").innerText = "Projekty";
-                document.getElementById("link-contact").innerText = "Kontakt";
-                document.getElementById("title-about-me").innerText = "O mně";
-                document.getElementById("title-projects").innerText = "Projekty";
-                document.getElementById("title-contact").innerText = "Kontakt";
-                document.getElementById("text-about-me").innerText = "Ahoj, miluji kódování a rád realizuji své nápady prostřednictvím projektů. Podívejte se na mou práci a neváhejte mě kontaktovat, pokud máte zájem o spolupráci!";
-                document.getElementById("text-coming-soon-1").innerText = "Již brzy...";
-                document.getElementById("text-coming-soon-2").innerText = "Již brzy...";
-                document.getElementById("text-name").innerText = "Jméno:";
-                document.getElementById("text-email").innerText = "Email:";
-                document.getElementById("text-reason-1").innerText = "Důvod kontaktování:";
-                document.getElementById("text-reason-2").innerText = "Vyberte důvod";
-                document.getElementById("text-bug").innerText = "Nahlášení chyby";
-                document.getElementById("text-idea").innerText = "Nápad ke zlepšení";
-                document.getElementById("text-question").innerText = "Mám otázku";
-                document.getElementById("text-other").innerText = "Jiné";
-                document.getElementById("text-message").innerText = "Zpráva:";
-                document.getElementById("text-send").innerText = "Odeslat";
-                document.getElementById("text-end-line").innerText = "© 2025 Kubajava0. Všechna práva vyhrazena.";
-            } else {
-                document.getElementById("site-title").innerText = "Kubajava0 - Github Projects";
-                document.getElementById("title").innerText = "Kubajava0 - Github Projects";
-                document.getElementById("link-about-me").innerText = "About me";
-                document.getElementById("link-projects").innerText = "Projects";
-                document.getElementById("link-contact").innerText = "Contact";
-                document.getElementById("title-about-me").innerText = "About me";
-                document.getElementById("title-projects").innerText = "Projects";
-                document.getElementById("title-contact").innerText = "Contact";
-                document.getElementById("text-about-me").innerText = "Hi, I love coding and enjoy bringing ideas to life through projects. Check out my work, and feel free to reach out if you're interested in collaborating!";
-                document.getElementById("text-coming-soon-1").innerText = "Coming soon...";
-                document.getElementById("text-coming-soon-2").innerText = "Coming soon...";
-                document.getElementById("text-name").innerText = "Name:";
-                document.getElementById("text-email").innerText = "Email:";
-                document.getElementById("text-reason-1").innerText = "Reason for Contact:";
-                document.getElementById("text-reason-2").innerText = "Select a reason";
-                document.getElementById("text-bug").innerText = "Report a Bug";
-                document.getElementById("text-idea").innerText = "Idea to Improve";
-                document.getElementById("text-question").innerText = "Have a Question";
-                document.getElementById("text-other").innerText = "Other";
-                document.getElementById("text-message").innerText = "Message:";
-                document.getElementById("text-send").innerText = "Send";
-                document.getElementById("text-end-line").innerText = "© 2025 Kubajava0. All rights reserved.";
-            }
-        }
     </script>
  </body>
 </html>
